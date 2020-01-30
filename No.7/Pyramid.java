@@ -33,6 +33,7 @@ class Traiangle {
 
 public class Pyramid extends Traiangle{
 	private double k = 1.0;
+	//側面積は底辺がbで高さがhの半分とkを合わせたものの平方根とする
 
 	public Pyramid(){
 	}
@@ -56,8 +57,8 @@ public class Pyramid extends Traiangle{
 
 	public double calcArea(){
 		double sum1 = super.calcArea();
-		
-		return sum1;
+		double sum2 = 3 * super.getB() * Math.sqrt(super.getH() * super.getH() + k * k);
+		return sum1 + sum2;
 	}
 
 

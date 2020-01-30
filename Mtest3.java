@@ -3,7 +3,7 @@ class Math3{
 	Math3(double x){
 		this.x = x;
 	}
-	void setX(){
+	void setX(double x){
 		this.x = x;
 	}
 	double getX(){
@@ -42,9 +42,9 @@ class Mtest3{
 		System.out.println(1.0/(2*ans21+ans22));
 		double answer;
 		answer = 0.0;
-		for(int k = 1; k < 6; k++){
-			Math3 c1 = new Math3(k/10.0);
-			Math3 c2 = new Math3((2*k)/10.0);
+		for(double k = 1; k < 6; k++){
+			Math3 c1 = new Math3(k/10);
+			Math3 c2 = new Math3(2*k/10);
 			answer = answer + (2 * c1.tan2()) + c2.tan2();
 		}	
 		System.out.println(answer);
